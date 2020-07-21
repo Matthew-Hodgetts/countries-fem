@@ -1,0 +1,31 @@
+.overview {
+  box-shadow: 0 0 5px 5px rgb(240, 240, 240);
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.overview__flag {
+  max-width: 100%;
+}
+
+.overview__title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.overview__details {
+  padding: 20px 15px 30px;
+  background-color: #fff;
+}
+
+.overview__details-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.overview__details-listItem {
+  span {
+    font-weight: bold;
+  }
+}
