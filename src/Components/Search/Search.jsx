@@ -18,7 +18,7 @@ const Search = ({ onSearch }) => {
               onChange={(e) => onSearch(e.target.value)}
             />
           </div>
-          <div className="col">
+          <div className="col text-right">
             <RegionFilter />
           </div>
         </div>

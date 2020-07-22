@@ -9,7 +9,7 @@ const Overview = ({ flag: flagUrl, name, population, region, capital }) => {
         <h2 className="overview__title">{name}</h2>
         <ul className="overview__details-list">
           <li className="overview__details-listItem">
-            <span>Population: </span> {population}
+            <span>Population: </span> {population.toLocaleString()}
           </li>
           <li className="overview__details-listItem">
             <span>Region: </span> {region}
