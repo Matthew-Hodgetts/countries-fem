@@ -3,7 +3,7 @@ import "./Search.scss";
 
 import RegionFilter from "../RegionFilter/RegionFilter";
 
-const Search = ({ onSearch }) => {
+const Search = ({ onSearch, onRegionFilter, currentFilter }) => {
   return (
     <section className="search py-5">
       <div className="container">
@@ -19,7 +19,10 @@ const Search = ({ onSearch }) => {
             />
           </div>
           <div className="col text-right">
-            <RegionFilter />
+            <RegionFilter
+              onRegionFilter={onRegionFilter}
+              currentFilter={currentFilter}
+            />
           </div>
         </div>
       </div>

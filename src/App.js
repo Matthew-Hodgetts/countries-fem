@@ -7,6 +7,7 @@ import Countries from "./Components/Countries/Countries";
 const App = () => {
   const [countries, setCountries] = useState([]);
   const [filteredText, setFilteredText] = useState("");
+  const [regionFilter, setRegionFilter] = useState("");
 
   useEffect(() => {
     // Get the countries from the api endpoint
@@ -19,12 +20,28 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <Search onSearch={setFilteredText} />
-      {filteredText.length > 0 ? (
+      <Search
+        onSearch={setFilteredText}
+        currentFilter={regionFilter}
+        onRegionFilter={setRegionFilter}
+      />
+      {filteredText.length > 0 || regionFilter.length > 0 ? (
         <Countries
-          countries={countries.filter((country) =>
-            country.name.toLowerCase().includes(filteredText.toLowerCase())
-          )}
+          countries={countries.filter((country) => {
+            if (regionFilter.length > 0) {
+              // Filter the region too
+              return (
+                country.name
+                  .toLowerCase()
+                  .includes(filteredText.toLowerCase()) &&
+                country.region === regionFilter
+              );
+            } else {
+              return country.name
+                .toLowerCase()
+                .includes(filteredText.toLowerCase());
+            }
+          })}
         />
       ) : (
         <Countries countries={countries} />
