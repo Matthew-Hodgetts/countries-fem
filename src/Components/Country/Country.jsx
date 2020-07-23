@@ -14,7 +14,7 @@ const Country = ({ code }) => {
     return (
       <div className="country">
         <div className="container">
-          <div className="row">
+          <div className="row align-items-center">
             <div className="col-lg-6">
               <img
                 src={country.flag}
@@ -37,7 +37,7 @@ const Country = ({ code }) => {
                     </li>
                     <li>
                       <span className="fw-800">Population:</span>{" "}
-                      {country.population}
+                      {country.population.toLocaleString()}
                     </li>
                     <li>
                       <span className="fw-800">Region:</span> {country.region}
