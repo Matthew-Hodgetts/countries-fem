@@ -1,0 +1,25 @@
+$light-mode-text-color: #111517;
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+  color: $light-mode-text-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+  color: $light-mode-text-color;
+}
+
+p,
+a,
+span {
+  color: $light-mode-text-color;
+}

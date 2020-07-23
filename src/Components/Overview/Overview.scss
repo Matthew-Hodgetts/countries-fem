@@ -1,5 +1,6 @@
 .overview {
-  box-shadow: 0 0 5px 5px rgb(240, 240, 240);
+  background: #fff;
+  box-shadow: 0px 0px 15px 0 rgba(230, 230, 230, 1);
   border-radius: 7px;
   overflow: hidden;
 }
@@ -25,7 +26,22 @@
 }
 
 .overview__details-listItem {
+  margin: 10px 0;
+}
+
+.dark-mode {
+  .overview {
+    background: rgb(43, 57, 69);
+    box-shadow: 0px 0px 5px 5px rgb(31, 41, 49);
+  }
+
+  .overview__title,
   span {
-    font-weight: bold;
+    color: #fff;
+  }
+
+  .overview__details {
+    background: rgb(43, 57, 69);
+    color: #fff;
   }
 }

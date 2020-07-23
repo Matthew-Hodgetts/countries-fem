@@ -1,11 +1,13 @@
 .regionFilter {
   position: relative;
-  display: inline-block;
+  display: block;
 }
 .regionFilter__button {
+  display: block;
+  width: 100%;
   padding: 1rem;
   background: #fff;
-  box-shadow: 0 0 5px 0 #ccc;
+  box-shadow: 0px 0px 5px 5px rgba(230, 230, 230, 1);
   border: none;
   border-radius: 7px;
   outline: none !important;
@@ -16,7 +18,7 @@
 
 .regionsFilter__regions {
   position: absolute;
-  top: 105%;
+  top: 100%;
   left: 0;
   right: 0;
   display: none;
@@ -36,9 +38,42 @@
 .regionsFilter__regionButton {
   border: none;
   padding: 0;
-  margin: 3px 0;
+  margin: 5px 0;
   outline: none;
   width: 100%;
   text-align: left;
   background: #fff;
+  cursor: pointer;
+  &--active {
+    font-weight: 800;
+  }
+}
+
+@media (min-width: 768px) {
+  .regionFilter {
+    position: relative;
+    display: inline-block;
+  }
+
+  .regionFilter__button {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+.dark-mode {
+  .regionFilter__button {
+    background: rgb(43, 57, 69);
+    box-shadow: 0px 0px 5px 5px rgb(31, 41, 49);
+    color: #fff;
+  }
+
+  .regionsFilter__regions {
+    background: rgb(43, 57, 69);
+    box-shadow: 0px 3px 5px 5px rgb(31, 41, 49);
+  }
+  .regionsFilter__regionButton {
+    background: rgb(43, 57, 69);
+    color: #fff;
+  }
 }

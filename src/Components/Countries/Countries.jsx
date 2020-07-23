@@ -16,6 +16,7 @@ const Countries = ({ countries }) => {
                   capital={country.capital}
                   region={country.region}
                   population={country.population}
+                  alpha3Code={country.alpha3Code}
                   key={country.alpha3Code}
                 />
               ))}

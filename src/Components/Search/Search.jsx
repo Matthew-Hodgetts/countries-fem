@@ -1,6 +1,6 @@
 import React from "react";
 import "./Search.scss";
-
+import { FiSearch } from "react-icons/fi";
 import RegionFilter from "../RegionFilter/RegionFilter";
 
 const Search = ({ onSearch, onRegionFilter, currentFilter }) => {
@@ -8,7 +8,7 @@ const Search = ({ onSearch, onRegionFilter, currentFilter }) => {
     <section className="search py-5">
       <div className="container">
         <div className="row">
-          <div className="col">
+          <div className="col-md-6 p-2 p-relative">
             <input
               type="text"
               name="search-name"
@@ -17,8 +17,9 @@ const Search = ({ onSearch, onRegionFilter, currentFilter }) => {
               className="search__input"
               onChange={(e) => onSearch(e.target.value)}
             />
+            <FiSearch className="search__icon" />
           </div>
-          <div className="col text-right">
+          <div className="col-md-6 p-2 text-right">
             <RegionFilter
               onRegionFilter={onRegionFilter}
               currentFilter={currentFilter}

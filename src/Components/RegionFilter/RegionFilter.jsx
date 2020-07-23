@@ -5,11 +5,12 @@ import { FiChevronDown } from "react-icons/fi";
 const RegionFilter = ({ onRegionFilter, currentFilter }) => {
   const [regionsActive, setRegionsActive] = useState(false);
   return (
-    <div className="regionFilter">
-      <button
-        className="regionFilter__button"
-        onClick={() => setRegionsActive(!regionsActive)}
-      >
+    <div
+      className="regionFilter"
+      onMouseEnter={() => setRegionsActive(true)}
+      onMouseLeave={() => setRegionsActive(false)}
+    >
+      <button className="regionFilter__button">
         Filter by Region <FiChevronDown />
       </button>
       <div

@@ -1,0 +1,23 @@
+.country__details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    padding: 5px 0;
+    font-size: 1.1rem;
+  }
+}
+
+.country__name {
+  font-size: 1.75rem;
+}
+.country__flag {
+  max-width: 100%;
+}
+
+.dark-mode {
+  .country,
+  .country__name {
+    color: #fff;
+  }
+}
